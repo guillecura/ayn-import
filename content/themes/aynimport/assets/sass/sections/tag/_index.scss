@@ -1,0 +1,31 @@
+// =============================================================================
+// TAG PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.content {
+  animation: op-in .999s ease-out forwards; // Opacity In animation
+  min-height: 0;
+  width: 75%;
+}
+// -----------------------------------------------------------------------------
+
+
+// Tag & Contact header
+// -----------------------------------------------------------------------------
+.tag-head {
+  min-height: $header-height + $distance * 7;
+  margin-bottom: $distance * 3;
+  padding-top: $header-height + $distance * 7;
+  position: relative;
+  width: $site-box;
+
+  @include mq(desktop) {
+    padding-left: $distance * 1.5;
+    padding-right: $distance * 1.5;
+    width: 100%;
+  }
+}
+// -----------------------------------------------------------------------------

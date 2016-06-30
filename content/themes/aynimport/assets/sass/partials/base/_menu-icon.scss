@@ -1,0 +1,27 @@
+// =============================================================================
+// SITE MENU STYLES
+// =============================================================================
+
+
+// Icon styles
+// -----------------------------------------------------------------------------
+.menu-icon {
+  background-image: url('../img/icon-menu.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $gray;
+  cursor: pointer;
+  display: none;
+  height: $header-height / 3;
+  position: fixed;
+  right: $header-height / 3;
+  top: $header-height / 3;
+  width: $header-height / 3;
+
+  @include mq(hybrid) {
+    display: block;
+    z-index: $z-top;
+  }
+}
+// -----------------------------------------------------------------------------

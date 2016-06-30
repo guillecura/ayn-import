@@ -1,0 +1,37 @@
+// =============================================================================
+// HOME PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.tag-about-us,
+.tag-brand {
+  padding: $distance * 6 $distance * 3 $distance * 3;
+
+  @include mq(desktop) {
+    > h2 {
+      padding: 0 $distance * 1.5;
+    }
+  }
+
+  @include mq(hybrid) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .post-header,
+  .post-content {
+    margin: 0;
+    max-width: $post-box;
+
+    @include mq(desktop) {
+      padding: 0 $distance * 1.5;
+    }
+  }
+}
+
+.tag-brand {
+  padding-bottom: $distance * 10;
+}
+// -----------------------------------------------------------------------------

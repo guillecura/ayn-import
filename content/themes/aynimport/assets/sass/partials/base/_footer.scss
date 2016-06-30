@@ -1,0 +1,128 @@
+// =============================================================================
+// FOOTER STYLES
+// =============================================================================
+
+
+// Base Styles
+// -----------------------------------------------------------------------------
+.site-footer {
+  background-color: $stone;
+  height: $footer-height;
+  padding: $distance * 3 $distance * 1.5;
+  position: relative;
+  width: 100%;
+
+  @include mq(mobile) {
+    height: auto;
+    text-align: center;
+  }
+
+  a:hover {
+    border: 0;
+    color: $black;
+  }
+
+
+// Logo
+// -----------------------------------------------------------------------------
+  .logo > a {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    display: block;
+    height: $menu-height;
+    position: absolute;
+    top: $distance * 3;
+    left: $distance;
+    width: $logo;
+
+    @include mq(mobile) {
+      position: static;
+    }
+  }
+
+  .no-logo > a {
+    font-size: $fh3;
+    left: $distance;
+    line-height: $menu-height;
+    position: absolute;
+  }
+// -----------------------------------------------------------------------------
+
+
+// Contact Us
+// -----------------------------------------------------------------------------
+  .contact-us {
+    border: 1px solid $black;
+    color: $black;
+    display: block;
+    font-size: $fdef;
+    font-weight: $regular;
+    line-height: $menu-height / 2;
+    list-style: none;
+    padding-left: $distance;
+    padding-right: $distance;
+    position: absolute;
+    right: $distance;
+    top: $distance * 4;
+
+    @include mq(mobile) {
+      display: inline-block;
+      margin: $distance * 3 auto $distance;
+      position: static;
+    }
+
+    &:hover {
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Address
+// -----------------------------------------------------------------------------
+  .address span {
+    color: $white;
+    display: block;
+    font-size: $ftiny;
+    margin: $distance auto;
+    text-align: center;
+  }
+// -----------------------------------------------------------------------------
+
+
+// Language
+// -----------------------------------------------------------------------------
+  .language {
+    color: $secondary-dark;
+    display: block;
+    font-size: $fsmall;
+    position: absolute;
+    right: $distance;
+    text-align: center;
+    top: $distance * 9;
+
+    @include mq(mobile) {
+      margin: $distance auto $distance * 3;
+      position: static;
+    }
+  }
+//------------------------------------------------------------------------------
+
+
+// Copyright
+// -----------------------------------------------------------------------------
+  .copyright {
+    bottom: 0;
+    color: $smoke-dark;
+    font-size: $ftiny;
+    left: 0;
+    line-height: $line-height * 2;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+}
+// -----------------------------------------------------------------------------

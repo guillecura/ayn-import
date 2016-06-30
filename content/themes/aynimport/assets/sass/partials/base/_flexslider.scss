@@ -1,0 +1,94 @@
+// =============================================================================
+// PAGE MAIN SECTION HEADER
+// =============================================================================
+
+// Flexslider
+// -----------------------------------------------------------------------------
+.flexslider {
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+
+  img {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .flex-viewport,
+  .slides {
+    height: 100%;
+  }
+
+  li { // Slider item
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+}
+
+.flex-control-nav {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: $z-top - 1;
+
+  li {
+    display: inline-block;
+    margin: $distance $distance / 2;
+
+    a {
+      background-color: rgba($white, .5);
+      border: 1px solid $stone;
+      border-radius: 50%;
+      display: block;
+      font-size: 0;
+      height: $line * 3;
+      width: $line * 3;
+
+      &.flex-active {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.flex-direction-nav {
+  display: none;
+}
+
+.flex-caption {
+  @include vertical-center;
+  color: $white;
+  font-family: $secondary-font;
+  font-size: $fh1;
+  font-style: italic;
+  font-weight: $bold;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 $distance rgba($black, .25);
+  width: 100%;
+
+  @include mq(hybrid) {
+    line-height: .666em;
+
+    h1 {font-size: 10vw;}
+  }
+
+  em {
+    font-family: $primary-font;
+    font-size: $fh2;
+    font-weight: $regular;
+
+    @include mq(hybrid) {
+      font-size: 6vw;
+      line-height: $line-height;
+    }
+  }
+}
+// -----------------------------------------------------------------------------

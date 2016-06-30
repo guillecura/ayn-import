@@ -1,0 +1,23 @@
+<nav>
+  {{#if @blog.logo}}
+    <h1 class="logo">
+      <a href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');">
+        {{@blog.title}}
+      </a>
+    </h1>
+  {{else}}
+    <h1 class="no-logo">
+      <a href="{{@blog.url}}">
+        {{@blog.title}}
+      </a>
+    </h1>
+  {{/if}}
+
+  <span class="menu-icon"></span>
+
+  <ul>
+    {{#foreach navigation}}
+    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+</nav>

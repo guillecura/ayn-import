@@ -1,0 +1,11 @@
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{#foreach posts}}
+<article class="{{post_class}}" id="{{slug}}">
+  <figure style="background-image: url('{{image}}');"></figure>
+  <section>
+    <h5>{{title}}</h5>
+    <p>{{content}}</p>
+  </section>
+  <hr>
+</article>
+{{/foreach}}

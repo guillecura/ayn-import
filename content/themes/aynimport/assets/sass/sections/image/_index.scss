@@ -1,0 +1,59 @@
+// =============================================================================
+// GALLERY PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.post-template.tag-gallery {
+  padding-top: $header-height;
+
+  .content {
+    background-color: $black;
+    max-width: 100%;
+  }
+
+  .post-head.main-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - #{$header-height + $footer-height});
+    width: 100%;
+
+    > img {
+      height: 0;
+      width: 0;
+    }
+  }
+
+  .image-description {
+    color: $white;
+    padding: $distance * 1.5;
+    max-width: $site-box;
+
+    .post-content,
+    .post-footer {
+      @include inline-block;
+      padding: $distance * 3 $distance * 1.5;
+
+      h4 {
+        line-height: $line-height;
+      }
+    }
+
+    .post-content {
+      width: calc(100% - 150px);
+    }
+
+    .post-footer {
+      text-align: right;
+      width: 150px;
+
+      a {
+        display: block;
+        font-size: $fsmall;
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------------------

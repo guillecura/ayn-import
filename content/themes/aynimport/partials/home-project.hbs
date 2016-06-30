@@ -1,0 +1,15 @@
+{{! This is the post loop - each post will be output using this markup }}
+<div class="flexslider">
+  <ul class="slides">
+    {{#get "posts" filter="featured:true" order="published_at asc" include="tags" as |slides|}}
+      {{#foreach slides}}
+        {{#has tag="hero"}}
+          <li style="background-image: url('{{image}}');">
+            <img src="{{image}}">
+            <span class="flex-caption">{{content}}</span>
+          </li>
+        {{/has}}
+      {{/foreach}}
+    {{/get}}
+  </ul>
+</div>

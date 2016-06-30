@@ -1,0 +1,106 @@
+// =============================================================================
+// GALLERY PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.tag-gallery {
+  .content {
+    min-height: calc(100vh - #{($header-height + $distance * 6) * 2 + $footer-height});
+  }
+
+  .filters {
+    background-color: $smoke;
+    display: block;
+    margin: $distance 0;
+    padding: $distance / 2;
+
+    @include mq(desktop) {
+      width: calc(100vw - #{$distance * 3});
+    }
+
+    > span {
+      @include inline-block;
+      color: $stone-dark;
+      font-size: $fsmall;
+      margin: $distance / 2;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      &.active,
+      &:hover {
+        color: $gray-dark;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .gallery-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    margin: 0;
+    margin-right: -5px;
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+    transition: all 250ms ease-out;
+    vertical-align: middle;
+    width: 0;
+
+    &.active {
+      height: #{$site-box / 4 - $distance};
+      margin-bottom: $distance;
+      margin-left: $distance / 2;
+      margin-right: 0;
+      opacity: 1;
+      pointer-events: all;
+      width: #{$site-box / 4 - $distance};
+
+      @include mq(desktop) {
+        height: calc(25vw - #{$distance});
+        width: calc(25% - #{$distance});
+      }
+
+      @include mq(hybrid) {
+        height: calc(50vw - #{$distance});
+        width: calc(50% - #{$distance});
+      }
+
+      @include mq(mobile) {
+        height: calc(100vw - #{$distance * 1.5});
+        width: calc(100% - #{$distance * 1.5});
+      }
+    }
+
+    &::after {
+      background-color: rgba($white, .75);
+      background-image: url('../img/icon-lens.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15%;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: opacity 150ms ease-out;
+      width: 100%;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+// -----------------------------------------------------------------------------
