@@ -8,108 +8,77 @@
 // Nav block
 // -----------------------------------------------------------------------------
 body > nav {
-  background-color: $white;
-  border-bottom: $border solid $secondary;
-  color: $black;
-  height: $menu-height;
-  left: $distance * 2;
+  background-color: $primary;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
   position: fixed;
-  right: $distance * 2;
-  top: $distance;
-  width: $menu-width;
-  z-index: $z-top + 1;
+  right: 0;
+  top: 0;
+  transition: width 300ms ease-out;
+  width: 0;
+  z-index: $z-top;
+
+  &.opened {
+    pointer-events: all;
+    width: 33vh;
+  }
 
 
 // Main content
 // -----------------------------------------------------------------------------
-  .logo > a {
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 0;
-    display: block;
-    height: $menu-height - $distance * 2.4;
-    position: absolute;
-    top: $distance * 1.2;
-    left: $distance;
-    width: $logo;
-  }
-
-  .no-logo > a {
-    font-size: $fh3;
-    left: $distance;
-    line-height: $menu-height;
-    position: absolute;
-  }
-
   > ul {
     position: absolute;
-    right: $distance;
+    right: $distance * 3;
     text-align: right;
-    top: $menu-height / 4;
-
-    @include mq(hybrid) {
-      background-color: rgba($white, .95);
-      bottom: 0;
-      height: 100vh;
-      left: 0;
-      opacity: 0;
-      padding-top: $menu-height + $distance * 3;
-      pointer-events: none;
-      right: 0;
-      text-align: center;
-      top: 0;
-      transition: all 250ms ease-out;
-      width: 100vw;
-
-      &.opened {
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
+    top: $header-height + $distance * 3;
   }
 
 
 // Type & texts ----------------------------------------------------------------
   li {
-    border: 1px solid transparent;
-    color: $smoke;
-    display: inline-block;
-    font-size: $fdef;
-    font-weight: $bold;
-    line-height: $menu-height / 2;
+    display: block;
     list-style: none;
-
-    @include mq(hybrid) {
-      border: 0;
-      display: block;
-      font-size: 10vw;
-      line-height: 12vw;
-    }
 
     &:hover,
     &.nav-current {
-      border-color: $black;
-      color: $black;
-
-      @include mq(hybrid) {
-        border: 0;
+      a h2 {
+        color: $secondary;
+        text-shadow: .066em .066em $white;
       }
+    }
+
+    &.nav-current a h2::before {
+      @include vertical-center;
+      background-image: url('../img/icon-pointer.svg');
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-size: 1vw;
+      content: '';
+      display: block;
+      height: 1vw;
+      left: calc((1vw + #{$distance}) * -1);
+      width: 1vw;
     }
 
     + li {
       margin-left: $distance;
-
-      @include mq(hybrid) {
-        margin-left: 0;
-      }
     }
 
     > a {
-      display: block;
+      display: inline-block;
       font-weight: $regular;
-      padding-left: $distance;
+      margin-right: 0;
+      padding-left: 1vw;
       padding-right: $distance;
+
+      h2 {
+        color: $white;
+        font-size: 3vw;
+        line-height: $line-height * 2;
+        position: relative;
+        transition: all 150ms ease-out;
+      }
     }
   }
 }

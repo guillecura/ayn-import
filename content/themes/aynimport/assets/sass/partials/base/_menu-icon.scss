@@ -12,16 +12,12 @@
   background-size: contain;
   color: $secondary;
   cursor: pointer;
-  display: none;
+  display: block;
   height: $header-height / 3;
   position: fixed;
-  right: $header-height / 3;
-  top: $header-height / 3;
+  right: $distance * 4;
+  top: $distance * 3.5;
   width: $header-height / 3;
-
-  @include mq(hybrid) {
-    display: block;
-    z-index: $z-top;
-  }
+  z-index: $z-top + 1;
 }
 // -----------------------------------------------------------------------------

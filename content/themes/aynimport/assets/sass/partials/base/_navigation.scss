@@ -6,37 +6,48 @@
 // General properties
 // -----------------------------------------------------------------------------
 .main-nav {
-  animation: header-in .333s ease-out forwards; // Slide In animation
-  border-bottom: $line * 2 solid $black;
-  height: $header-height;
-  max-width: $site-box;
+  border-top: $distance solid $primary;
+  height: $header-height + $distance;
+  left: $distance;
+  max-width: calc(100% - #{$distance * 2});
   padding: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: left 300ms ease-out;
   width: 100%;
   z-index: $z-top;
 
-  @include mq(desktop) {
-    padding: 0 $distance * 1.5;
-  }
+  &.active {
+    background-color: $white;
+    pointer-events: all;
 
-  @include mq(mobile) {
-    padding: 0;
-    width: calc(100% - #{$distance * 3});
-  }
+    &::after {
+      border-bottom: $border solid $secondary;
+      bottom: -$border / 2;
+      content: '';
+      display: block;
+      left: $distance;
+      position: absolute;
+      width: calc(100% - #{$distance * 2});
+    }
 
-
-// Blog name and page title ----------------------------------------------------
-  .page-title {
-    display: inline-block;
-    font-size: $fh5;
-    font-weight: $medium;
-    line-height: $header-height - $distance * 2;
-    margin-top: $distance * 2;
-    width: auto;
-
-    > a:hover {
-      border: 0;
+    .logo {
+      opacity: 1;
     }
   }
-// -----------------------------------------------------------------------------
+
+  .logo {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    height: $header-height - $distance * 3;
+    margin: $distance * 1.5 $distance * 2;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+    width: $header-height * 2 - $distance * 3;
+  }
 }
 // -----------------------------------------------------------------------------

@@ -10,7 +10,7 @@
 </header>
 
 {{!-- The main content area on the homepage --}}
-<main id="content" class="content" role="main">
+<main id="content" name="content" class="content" role="main">
 
   {{#get "posts" filter="featured:true" order="published_at desc" include="tags" as |about|}}
     {{#foreach about}}

@@ -35,11 +35,18 @@ body {
   font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   font-weight: $regular;
+  left: 0;
+  position: relative;
   text-rendering: optimizeLegibility;
+  transition: left 300ms ease-out;
 
   &.nav-opened {
-    height: 100vh;
+    left: -33vh;
     overflow: hidden;
+
+    .main-nav {
+      left: calc(-33vh + #{$distance});
+    }
   }
 }
 // -----------------------------------------------------------------------------

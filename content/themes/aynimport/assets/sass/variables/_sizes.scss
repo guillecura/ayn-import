@@ -32,7 +32,7 @@ $post-heading-height:        720px;
 
 // Navigation Menu
 // -----------------------------------------------------------------------------
-$menu-height:                80px;
+$menu-height:                $header-height;
 $menu-width:                 calc(100% - #{$distance * 4}); // removed viewport units to enable scrollbar
 // -----------------------------------------------------------------------------
 

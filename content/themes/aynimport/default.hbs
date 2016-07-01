@@ -34,7 +34,21 @@
 <body class="{{body_class}} nav-closed">
 
     {{!-- The blog navigation links --}}
-    {{!navigation}}
+    {{navigation}}
+
+    <header class="main-nav">
+      {{#if @blog.logo}}
+        <a class="logo" href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');">
+          {{@blog.title}}
+        </a>
+      {{else}}
+        <a class="no-logo" href="{{@blog.url}}">
+          {{@blog.title}}
+        </a>
+      {{/if}}
+    </header>
+
+    <span tabindex="0" class="menu-icon"></span>
 
     <div class="site-wrapper">
 
@@ -69,12 +83,12 @@
         </figure>
 
         <figure>
-          <a class="contact-us" href="mailto:info@friocal.com"><h2>Contact Us</h2></a>
+          <a class="contact-us" href="mailto:info@aynimportaciones.com"><h2>Contact Us</h2></a>
         </figure>
 
       </div>
 
-      <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Friocal S.A. Uruguay</section>
+      <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Montevideo, Uruguay</section>
 
     </footer>
 

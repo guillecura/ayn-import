@@ -5,9 +5,13 @@
 
 // General
 // -----------------------------------------------------------------------------
+.home-template .content {
+  padding-top: $header-height + $distance;
+}
+
 .tag-about-us{
   background-color: $white;
-  margin: $distance * 5 + $header-height auto $distance * 5;
+  margin: $distance * 5 auto $distance * 8;
   padding: $distance * 3 $distance * 4;
   position: relative;
 
@@ -31,29 +35,40 @@
 }
 
 .tag-services.hi-box {
+  @include inline-block;
   margin-left: 0;
-  width: 50%;
+  width: calc(50% - #{$distance});
 }
 
 .tag-our-brands {
-  margin-right: 0;
+  @include inline-block;
+  margin-left: $distance;
+  margin-bottom: calc(15vh + #{$footer-height / 3});
+  position: relative;
   text-align: center;
-  width: 50%;
+  top: 15vh;
+  vertical-align: bottom;
+  width: calc(50% - #{$distance});
 
-  .post-content figure {
-    $size: (($site-box / 2) / 3) - $distance * 2;
+  .post-content {
+    margin-bottom: 0;
 
-    @include inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: $size;
-    margin-left: $distance * 2;
-    width: $size;
+    figure {
+      $size: (($site-box / 2) / 3) - $distance * 5;
 
-    img {
-      height: 0;
-      width: 0;
+      @include inline-block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: $size;
+      margin-left: $distance * 2;
+      margin-right: $distance * 1.5;
+      width: $size;
+
+      img {
+        height: 0;
+        width: 0;
+      }
     }
   }
 }
