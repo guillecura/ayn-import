@@ -44,7 +44,8 @@ body {
     left: -33vh;
     overflow: hidden;
 
-    .main-nav {
+    .main-nav,
+    .pages-nav {
       left: calc(-33vh + #{$distance});
     }
   }

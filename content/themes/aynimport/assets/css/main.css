@@ -85,7 +85,8 @@ body {
   body.nav-opened {
     left: -33vh;
     overflow: hidden; }
-    body.nav-opened .main-nav {
+    body.nav-opened .main-nav,
+    body.nav-opened .pages-nav {
       left: calc(-33vh + 10px); }
 
 .site-wrapper {
@@ -423,7 +424,7 @@ body > nav {
   z-index: 10000; }
   body > nav.opened {
     pointer-events: all;
-    width: 33vh; }
+    width: 25vw; }
   body > nav > ul {
     position: absolute;
     right: 30px;
