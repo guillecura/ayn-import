@@ -30,7 +30,9 @@
 
     // Sticky navs
     var $mainNav = $("header.main-nav");
+    var $pageNav = $("header.pages-nav");
     var height = $(window).height() - 100;
+    var height2 = $("header.main-header").height();
 
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
@@ -40,6 +42,13 @@
         $mainNav.addClass("active");
       } else {
         $mainNav.removeClass("active");
+      }
+
+      // Pages page
+      if (scroll >= height2) {
+        $pageNav.addClass("active");
+      } else {
+        $pageNav.removeClass("active");
       }
     });
 

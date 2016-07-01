@@ -5,7 +5,8 @@
 
 // General properties
 // -----------------------------------------------------------------------------
-.main-nav {
+.main-nav,
+.pages-nav {
   border-top: $distance solid $primary;
   height: $header-height + $distance;
   left: $distance;
@@ -48,6 +49,15 @@
     opacity: 0;
     transition: opacity 150ms ease-out;
     width: $header-height * 2 - $distance * 3;
+  }
+}
+
+.pages-nav {
+  pointer-events: all;
+  transition: left 300ms ease-out, background-color 150ms ease-out;
+
+  .logo {
+    opacity: 1;
   }
 }
 // -----------------------------------------------------------------------------

@@ -478,7 +478,8 @@ body > nav {
   width: 26.66667px;
   z-index: 10001; }
 
-.main-nav {
+.main-nav,
+.pages-nav {
   border-top: 10px solid #212935;
   height: 90px;
   left: 10px;
@@ -490,10 +491,12 @@ body > nav {
   transition: left 300ms ease-out;
   width: 100%;
   z-index: 10000; }
-  .main-nav.active {
+  .main-nav.active,
+  .pages-nav.active {
     background-color: white;
     pointer-events: all; }
-    .main-nav.active::after {
+    .main-nav.active::after,
+    .pages-nav.active::after {
       border-bottom: 3px solid #b48e4a;
       bottom: -1.5px;
       content: '';
@@ -501,9 +504,11 @@ body > nav {
       left: 10px;
       position: absolute;
       width: calc(100% - 20px); }
-    .main-nav.active .logo {
+    .main-nav.active .logo,
+    .pages-nav.active .logo {
       opacity: 1; }
-  .main-nav .logo {
+  .main-nav .logo,
+  .pages-nav .logo {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -514,6 +519,12 @@ body > nav {
     opacity: 0;
     transition: opacity 150ms ease-out;
     width: 130px; }
+
+.pages-nav {
+  pointer-events: all;
+  transition: left 300ms ease-out, background-color 150ms ease-out; }
+  .pages-nav .logo {
+    opacity: 1; }
 
 .post-content {
   position: relative; }
