@@ -25,7 +25,8 @@ html {
 // Body properties -------------------------------------------------------------
 body {
   background-color: $white;
-  color: $black;
+  border: $distance solid $primary;
+  color: $primary;
   // Font rendering
   font-family: $primary-font;
   font-feature-settings: 'kern';
@@ -46,7 +47,7 @@ body {
 
 // Site wrapper ----------------------------------------------------------------
 .site-wrapper {
-  min-height: $site-height;
+  min-height: $section-height;
   position: relative;
   width: 100%;
 

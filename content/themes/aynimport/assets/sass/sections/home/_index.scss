@@ -5,33 +5,56 @@
 
 // General
 // -----------------------------------------------------------------------------
-.tag-about-us,
-.tag-brand {
-  padding: $distance * 6 $distance * 3 $distance * 3;
+.tag-about-us{
+  background-color: $white;
+  margin: $distance * 5 + $header-height auto $distance * 5;
+  padding: $distance * 3 $distance * 4;
+  position: relative;
 
-  @include mq(desktop) {
-    > h2 {
-      padding: 0 $distance * 1.5;
-    }
-  }
-
-  @include mq(hybrid) {
-    padding-left: 0;
-    padding-right: 0;
+  &::before {
+    background: $secondary;
+    bottom: -$distance / 2;
+    content: '';
+    display: block;
+    height: 10%;
+    position: absolute;
+    right: -$distance / 2;
+    width: 50%;
+    z-index: -1;
   }
 
   .post-header,
   .post-content {
     margin: 0;
     max-width: $post-box;
-
-    @include mq(desktop) {
-      padding: 0 $distance * 1.5;
-    }
   }
 }
 
-.tag-brand {
-  padding-bottom: $distance * 10;
+.tag-services.hi-box {
+  margin-left: 0;
+  width: 50%;
+}
+
+.tag-our-brands {
+  margin-right: 0;
+  text-align: center;
+  width: 50%;
+
+  .post-content figure {
+    $size: (($site-box / 2) / 3) - $distance * 2;
+
+    @include inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: $size;
+    margin-left: $distance * 2;
+    width: $size;
+
+    img {
+      height: 0;
+      width: 0;
+    }
+  }
 }
 // -----------------------------------------------------------------------------

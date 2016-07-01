@@ -9,13 +9,13 @@
 // -----------------------------------------------------------------------------
 body > nav {
   background-color: $white;
-  border-bottom: 1px solid $stone;
+  border-bottom: $border solid $secondary;
   color: $black;
   height: $menu-height;
-  left: 0;
+  left: $distance * 2;
   position: fixed;
-  right: 0;
-  top: 0;
+  right: $distance * 2;
+  top: $distance;
   width: $menu-width;
   z-index: $z-top + 1;
 
@@ -73,7 +73,7 @@ body > nav {
 // Type & texts ----------------------------------------------------------------
   li {
     border: 1px solid transparent;
-    color: $stone;
+    color: $smoke;
     display: inline-block;
     font-size: $fdef;
     font-weight: $bold;

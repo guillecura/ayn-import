@@ -6,6 +6,7 @@
 // Define sizes
 // -----------------------------------------------------------------------------
 .hero-section {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,6 +14,20 @@
   max-height: $site-height;
   min-height: $hero-min-height;
   position: relative;
+
+  &::before {
+    border: $border solid $secondary;
+    content: '';
+    display: block;
+    height: calc(100% - #{$distance * 2 + $border * 2});
+    left: $distance;
+    pointer-events: none;
+    position: absolute;
+    right: $distance;
+    top: $distance;
+    width: calc(100% - #{$distance * 2 + $border * 2});
+    z-index: 1;
+  }
 
   @include mq(mobile) {
     max-height: 66vh;
@@ -23,32 +38,42 @@
   &.hero-section:not(.no-cover) {
     animation: item-in .666s ease-out forwards; // Slide In animation
   }
-}
-// -----------------------------------------------------------------------------
-
 
 // Main Header
 // -----------------------------------------------------------------------------
-.main-header-content {
-  @include vertical-center;
-  text-align: center;
-  width: 100%;
+  > div {
+    @include vertical-center;
+    text-align: center;
+    width: 100%;
 
-  > * {
-    animation: item-in .666s ease-out forwards; // Slide In animation
+    > * {
+      animation: item-in .666s ease-out forwards; // Slide In animation
+    }
+
+    > .main-logo {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      font-size: 0;
+      height: $hero-logo;
+      margin-bottom: $distance * 4;
+      width: $hero-logo;
+    }
   }
 
-  > .page-logo {
+  > .anchor {
+    background-image: url('../img/anchor.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: $hero-logo;
-    margin-bottom: $distance * 4;
-    width: $hero-logo;
+    bottom: $distance * 6;
+    cursor: pointer;
+    display: block;
+    left: calc(50% - #{$button-height / 2});
+    height: $button-height;
+    position: absolute;
+    width: $button-height;
   }
-
-  > .page-description {
-    font-weight: $regular;
-  }
+// -----------------------------------------------------------------------------
 }
 // -----------------------------------------------------------------------------

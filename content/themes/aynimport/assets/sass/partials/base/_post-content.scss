@@ -6,8 +6,6 @@
 // General
 // -----------------------------------------------------------------------------
 .post-content {
-  padding: 0 $distance * 1.5;
-  padding-top: $distance * 3;
   position: relative;
 
   &:last-of-type {
@@ -29,7 +27,8 @@
 // Text
 // -----------------------------------------------------------------------------
   p {
-    font-size: $fsmall;
+    font-size: $fdef;
+    line-height: $line-height-big;
 
     + p {
       margin-top: $distance * 2;
@@ -51,7 +50,7 @@
     padding-left: $distance * 2;
 
     li {
-      font-size: $fsmall;
+      font-size: $fdef;
     }
   }
 
@@ -109,7 +108,7 @@
     background-color: $smoke;
     border: 1px solid darken($smoke-dark, 10%);
     border-radius: $border;
-    color: $stone-light;
+    color: $smoke;
     font-size: $ftiny;
     line-height: $line-height-big;
     padding: $distance / 3 $distance / 2;

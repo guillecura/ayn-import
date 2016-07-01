@@ -34,43 +34,49 @@
 <body class="{{body_class}} nav-closed">
 
     {{!-- The blog navigation links --}}
-    {{navigation}}
+    {{!navigation}}
 
     <div class="site-wrapper">
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
-        {{!-- The tiny footer at the very bottom --}}
-        <footer class="site-footer">
+    </div>
+
+    {{!-- The tiny footer at the very bottom --}}
+    <footer class="site-footer">
+      <div>
+        <figure>
           {{#if @blog.logo}}
-            <h1 class="logo">
-              <a href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');">
-                {{@blog.title}}
-              </a>
-            </h1>
+            <a class="logo" href="{{@blog.url}}">
+              {{@blog.title}}
+            </a>
           {{else}}
-            <h1 class="no-logo">
-              <a href="{{@blog.url}}">
-                {{@blog.title}}
-              </a>
-            </h1>
+            <a class="no-logo" href="{{@blog.url}}">
+              {{@blog.title}}
+            </a>
           {{/if}}
 
-          <a class="contact-us" href="mailto:info@friocal.com">Contáctenos</a>
+          {{#get "posts" filter="featured:true" order="published_at desc" include="tags" as |address|}}
+            {{#foreach address}}
+              {{#has tag="address"}}
+                <section class="address">
+                  {{content}}
+                </section>
+              {{/has}}
+            {{/foreach}}
+          {{/get}}
+        </figure>
 
-          <a class="language" href="http://en.friocal.com">Version en Inglés</a>
+        <figure>
+          <a class="contact-us" href="mailto:info@friocal.com"><h2>Contact Us</h2></a>
+        </figure>
 
-          <section class="address">
-            <span>Vilardebó 2070, Montevideo - Uruguay</span>
-            <span>Tel/Fax: +(5982) 200 99 00 / +(5982) 200 02 46</span>
-          </section>
+      </div>
 
-          <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Friocal S.A. Uruguay</section>
+      <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Friocal S.A. Uruguay</section>
 
-        </footer>
-
-    </div>
+    </footer>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -78,7 +84,6 @@
     {{ghost_foot}}
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.flexslider-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prefixfree.min.js"}}"></script>
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>

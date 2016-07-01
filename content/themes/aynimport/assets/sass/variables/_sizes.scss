@@ -9,9 +9,9 @@ $border:                     3px;
 $distance:                   10px;
 $icon:                       32px;
 $line:                       3px;
-$logo:                       180px;
+$logo:                       6rem;
 $z-top:                      10000;
-$post-box:                   720px;
+$post-box:                   960px;
 $site-box:                   1024px;
 $tag-head:                   20vh;
 // -----------------------------------------------------------------------------
@@ -21,11 +21,11 @@ $tag-head:                   20vh;
 // -----------------------------------------------------------------------------
 $button-height:              60px;
 $header-height:              80px;
-$footer-height:              150px;
-$section-height:             calc(100vh - #{$header-height + $distance * 1.5});
+$footer-height:              320px;
+$section-height:             calc(100vh - #{$footer-height + $distance * 2});
 $contact-height:             calc(100vh - #{$tag-head} - #{$header-height + $footer-height + $distance * 6});
 $post-height:                calc(100vh - #{$footer-height});
-$site-height:                100vh;
+$site-height:                calc(100vh - #{$distance});
 $post-heading-height:        720px;
 // -----------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ $post-heading-height:        720px;
 // Navigation Menu
 // -----------------------------------------------------------------------------
 $menu-height:                80px;
-$menu-width:                 100%; // removed viewport units to enable scrollbar
+$menu-width:                 calc(100% - #{$distance * 4}); // removed viewport units to enable scrollbar
 // -----------------------------------------------------------------------------
 
 
@@ -41,7 +41,7 @@ $menu-width:                 100%; // removed viewport units to enable scrollbar
 // -----------------------------------------------------------------------------
 $hero-min-height:            450px;
 $hero-width:                 100%; // removed viewport units to enable scrollbar
-$hero-logo:                  200px;
+$hero-logo:                  25vw;
 // -----------------------------------------------------------------------------
 
 // Author

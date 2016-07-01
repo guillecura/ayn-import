@@ -22,7 +22,7 @@
 
     > span {
       @include inline-block;
-      color: $stone-dark;
+      color: $smoke-dark;
       font-size: $fsmall;
       margin: $distance / 2;
       text-transform: lowercase;
@@ -33,7 +33,7 @@
 
       &.active,
       &:hover {
-        color: $gray-dark;
+        color: $secondary-dark;
         text-decoration: underline;
       }
     }

@@ -14,15 +14,10 @@
     var $postContent = $(".post-content");
     $postContent.fitVids();
 
-    $('.flexslider').flexslider({
-      animation: "fade"
-    });
-
-
-    $document.on('scroll', function () {
-      $('.flexslider li').css(
-        'background-position-y', $document.scrollTop() / 4);
-    });
+    // $document.on('scroll', function () {
+    //   $('.hero-section').css(
+    //     'background-position-y', $document.scrollTop() / 2);
+    // });
 
     // Menu & menu button animation
     var $btn = $(".menu-icon");
