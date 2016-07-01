@@ -738,58 +738,61 @@ h6 {
       .work-sample .post-title {
         font-size: 0.7rem; } }
 
-.contact-head {
+.tag-products .content {
+  animation: op-in .999s ease-out forwards;
+  min-height: calc(100vh - 600px);
+  width: 1024px; }
+
+.tag-products .tag-head {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
-  min-height: 6rem;
+  height: 33vh;
   position: relative;
   width: 100%; }
 
-.contact-content {
-  animation: op-in .999s ease-out forwards;
-  min-height: calc(100vh - 20vh - 460px);
-  padding: 15px 0; }
-  @media (max-width: 640px) {
-    .contact-content {
-      padding-top: 0; } }
-  .contact-content > article {
-    max-width: 960px;
-    padding: 30px 0;
-    text-align: center;
-    width: 100%; }
-    @media (max-width: 640px) {
-      .contact-content > article {
-        padding: 10px 15px; } }
-    .contact-content > article .button {
-      color: inherit;
-      line-height: 4em;
-      margin: 20px auto; }
-    .contact-content > article span {
-      font-size: 0.85rem; }
-    .contact-content > article p {
-      margin-left: auto;
-      margin-right: auto; }
-  @media (max-width: 640px) {
-    .contact-content .post-title {
-      font-size: 2.5rem; } }
-  .contact-content .social-links {
-    margin: 10px auto auto;
-    padding-left: 0; }
+.tag-products .tag-description {
+  animation: item-in .666s ease-out forwards;
+  position: relative;
+  top: -5.5rem;
+  width: 1024px; }
+  .tag-products .tag-description .hi-box {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+    margin-left: 0;
+    width: calc(50% - 10px); }
+  .tag-products .tag-description .brands {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+    margin-top: calc(5.5rem + 30px);
+    margin-left: 10px;
+    text-align: right;
+    width: calc(50% - 10px); }
+    .tag-products .tag-description .brands figure {
+      display: inline-block;
+      margin-right: -5px;
+      vertical-align: top;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 75.33333px;
+      margin-left: 5px;
+      width: 75.33333px; }
+      .tag-products .tag-description .brands figure img {
+        height: 0;
+        width: 0; }
 
-.tag-gallery .content {
-  min-height: calc(100vh - 600px); }
-
-.tag-gallery .filters {
+.tag-products .filters {
   background-color: #e6e7e8;
   display: block;
   margin: 10px 0;
   padding: 5px; }
   @media (max-width: 1024px) {
-    .tag-gallery .filters {
+    .tag-products .filters {
       width: calc(100vw - 30px); } }
-  .tag-gallery .filters > span {
+  .tag-products .filters > span {
     display: inline-block;
     margin-right: -5px;
     vertical-align: top;
@@ -797,13 +800,13 @@ h6 {
     font-size: 0.85rem;
     margin: 5px;
     text-transform: lowercase; }
-    .tag-gallery .filters > span::first-letter {
+    .tag-products .filters > span::first-letter {
       text-transform: uppercase; }
-    .tag-gallery .filters > span.active, .tag-gallery .filters > span:hover {
+    .tag-products .filters > span.active, .tag-products .filters > span:hover {
       color: #90713b;
       text-decoration: underline; }
 
-.tag-gallery .gallery-image {
+.tag-products .gallery-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -818,7 +821,7 @@ h6 {
   transition: all 250ms ease-out;
   vertical-align: middle;
   width: 0; }
-  .tag-gallery .gallery-image.active {
+  .tag-products .gallery-image.active {
     height: 246px;
     margin-bottom: 10px;
     margin-left: 5px;
@@ -827,18 +830,18 @@ h6 {
     pointer-events: all;
     width: 246px; }
     @media (max-width: 1024px) {
-      .tag-gallery .gallery-image.active {
+      .tag-products .gallery-image.active {
         height: calc(25vw - 10px);
         width: calc(25% - 10px); } }
     @media (max-width: 854px) {
-      .tag-gallery .gallery-image.active {
+      .tag-products .gallery-image.active {
         height: calc(50vw - 10px);
         width: calc(50% - 10px); } }
     @media (max-width: 640px) {
-      .tag-gallery .gallery-image.active {
+      .tag-products .gallery-image.active {
         height: calc(100vw - 15px);
         width: calc(100% - 15px); } }
-  .tag-gallery .gallery-image::after {
+  .tag-products .gallery-image::after {
     background-color: rgba(255, 255, 255, 0.75);
     background-image: url("../img/icon-lens.svg");
     background-position: center;
@@ -854,7 +857,7 @@ h6 {
     top: 0;
     transition: opacity 150ms ease-out;
     width: 100%; }
-  .tag-gallery .gallery-image:hover::after {
+  .tag-products .gallery-image:hover::after {
     opacity: 1; }
 
 .home-template .content {
@@ -914,56 +917,3 @@ h6 {
       .tag-our-brands .post-content figure img {
         height: 0;
         width: 0; }
-
-.post-template.tag-gallery {
-  padding-top: 80px; }
-  .post-template.tag-gallery .content {
-    background-color: black;
-    max-width: 100%; }
-  .post-template.tag-gallery .post-head.main-header {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(100vh - 400px);
-    width: 100%; }
-    .post-template.tag-gallery .post-head.main-header > img {
-      height: 0;
-      width: 0; }
-  .post-template.tag-gallery .image-description {
-    color: white;
-    padding: 15px;
-    max-width: 1024px; }
-    .post-template.tag-gallery .image-description .post-content,
-    .post-template.tag-gallery .image-description .post-footer {
-      display: inline-block;
-      margin-right: -5px;
-      vertical-align: top;
-      padding: 30px 15px; }
-      .post-template.tag-gallery .image-description .post-content h4,
-      .post-template.tag-gallery .image-description .post-footer h4 {
-        line-height: 1.11em; }
-    .post-template.tag-gallery .image-description .post-content {
-      width: calc(100% - 150px); }
-    .post-template.tag-gallery .image-description .post-footer {
-      text-align: right;
-      width: 150px; }
-      .post-template.tag-gallery .image-description .post-footer a {
-        display: block;
-        font-size: 0.85rem; }
-
-.content {
-  animation: op-in .999s ease-out forwards;
-  min-height: 0;
-  width: 75%; }
-
-.tag-head {
-  min-height: 150px;
-  margin-bottom: 30px;
-  padding-top: 150px;
-  position: relative;
-  width: 1024px; }
-  @media (max-width: 1024px) {
-    .tag-head {
-      padding-left: 15px;
-      padding-right: 15px;
-      width: 100%; } }

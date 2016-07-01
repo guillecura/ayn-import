@@ -5,11 +5,64 @@
 
 // General
 // -----------------------------------------------------------------------------
-.tag-gallery {
+.tag-products {
   .content {
+    animation: op-in .999s ease-out forwards; // Opacity In animation
     min-height: calc(100vh - #{($header-height + $distance * 6) * 2 + $footer-height});
+    width: $site-box;
   }
 
+  .tag-head {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33vh;
+    position: relative;
+    width: 100%;
+  }
+
+  .tag-description {
+    animation: item-in .666s ease-out forwards; // Slide In animation
+    position: relative;
+    top: -5.5rem;
+    width: $site-box;
+
+    .hi-box {
+      @include inline-block;
+      margin-left: 0;
+      width: calc(50% - #{$distance});
+    }
+
+    .brands {
+      @include inline-block;
+      margin-top: calc(5.5rem + #{$distance * 3});
+      margin-left: $distance;
+      text-align: right;
+      width: calc(50% - #{$distance});
+
+      figure {
+        $size: (($site-box / 2) / 6) - $distance;
+
+        @include inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: $size;
+        margin-left: $distance / 2;
+        width: $size;
+
+        img {
+          height: 0;
+          width: 0;
+        }
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Filters
+// -----------------------------------------------------------------------------
   .filters {
     background-color: $smoke;
     display: block;
@@ -38,7 +91,11 @@
       }
     }
   }
+// -----------------------------------------------------------------------------
 
+
+// Images
+// -----------------------------------------------------------------------------
   .gallery-image {
     background-position: center;
     background-repeat: no-repeat;
