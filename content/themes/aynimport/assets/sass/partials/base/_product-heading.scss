@@ -1,0 +1,62 @@
+// =============================================================================
+// TAG PRODUCT / PRODUCT CATEGORIES FILTER
+// =============================================================================
+
+
+// Filters
+// -----------------------------------------------------------------------------
+.filters {
+  display: block;
+  height: $header-height * 2 + $distance;
+  margin: $distance 0;
+  max-height: $header-height * 2 + $distance;
+  padding: $distance / 2 $distance * 2;
+  padding-top: $header-height + $distance;
+  position: relative;
+
+  &::before {
+    background-color: $secondary;
+    content: '';
+    height: $border;
+    left: 0;
+    position: absolute;
+    top: calc(#{$fdef} + #{$header-height + $distance * 3.5});
+    width: 100%;
+    z-index: -1;
+  }
+
+  > h2 {
+    background-color: $white;
+    float: left;
+    padding: 0 $distance;
+  }
+
+  > a {
+    @include inline-block;
+    color: $secondary;
+    font-size: $fdef;
+    font-weight: $medium;
+    line-height: $fdef;
+    margin: $distance * 2.5 $distance / 2 $distance / 2;
+    text-transform: uppercase;
+
+    &::before {
+      content: '•';
+      font-weight: $bold;
+      margin-right: $distance;
+    }
+
+    &:last-child::after {
+      content: '•';
+      font-weight: $bold;
+      margin-left: $distance;
+    }
+
+    &.active,
+    &:hover {
+      color: $secondary;
+      text-shadow: .066em .066em $primary;
+    }
+  }
+}
+// -----------------------------------------------------------------------------

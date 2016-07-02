@@ -41,7 +41,7 @@ body {
   transition: left 300ms ease-out;
 
   &.nav-opened {
-    left: -33vh;
+    left: -25vw;
     overflow: hidden;
 
     .main-nav,

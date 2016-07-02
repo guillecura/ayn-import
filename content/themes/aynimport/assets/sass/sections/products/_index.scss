@@ -5,10 +5,12 @@
 
 // General
 // -----------------------------------------------------------------------------
-.tag-products {
+.tag-template {
   .content {
     animation: op-in .999s ease-out forwards; // Opacity In animation
+    margin-bottom: $distance * 5;
     min-height: calc(100vh - #{($header-height + $distance * 6) * 2 + $footer-height});
+    text-align: left;
     width: $site-box;
   }
 
@@ -61,39 +63,6 @@
 // -----------------------------------------------------------------------------
 
 
-// Filters
-// -----------------------------------------------------------------------------
-  .filters {
-    background-color: $smoke;
-    display: block;
-    margin: $distance 0;
-    padding: $distance / 2;
-
-    @include mq(desktop) {
-      width: calc(100vw - #{$distance * 3});
-    }
-
-    > span {
-      @include inline-block;
-      color: $smoke-dark;
-      font-size: $fsmall;
-      margin: $distance / 2;
-      text-transform: lowercase;
-
-      &::first-letter {
-        text-transform: uppercase;
-      }
-
-      &.active,
-      &:hover {
-        color: $secondary-dark;
-        text-decoration: underline;
-      }
-    }
-  }
-// -----------------------------------------------------------------------------
-
-
 // Images
 // -----------------------------------------------------------------------------
   .gallery-image {
@@ -101,62 +70,55 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
-    font-size: 0;
-    height: 0;
+    height: #{$site-box / 4 - $distance};
     margin: 0;
-    margin-right: -5px;
-    opacity: 0;
-    pointer-events: none;
+    margin-bottom: $distance;
+    margin-left: $distance / 2;
     position: relative;
     transition: all 250ms ease-out;
     vertical-align: middle;
-    width: 0;
-
-    &.active {
-      height: #{$site-box / 4 - $distance};
-      margin-bottom: $distance;
-      margin-left: $distance / 2;
-      margin-right: 0;
-      opacity: 1;
-      pointer-events: all;
-      width: #{$site-box / 4 - $distance};
-
-      @include mq(desktop) {
-        height: calc(25vw - #{$distance});
-        width: calc(25% - #{$distance});
-      }
-
-      @include mq(hybrid) {
-        height: calc(50vw - #{$distance});
-        width: calc(50% - #{$distance});
-      }
-
-      @include mq(mobile) {
-        height: calc(100vw - #{$distance * 1.5});
-        width: calc(100% - #{$distance * 1.5});
-      }
-    }
+    width: #{$site-box / 4 - $distance};
 
     &::after {
-      background-color: rgba($white, .75);
-      background-image: url('../img/icon-lens.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 15%;
-      bottom: 0;
+      border: $border solid $white;
+      bottom: $distance / 2;
       content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0;
+      height: calc(100% - #{$distance + $border * 2});
+      left: $distance / 2;
       position: absolute;
-      right: 0;
-      top: 0;
-      transition: opacity 150ms ease-out;
-      width: 100%;
+      right: $distance / 2;
+      top: $distance / 2;
+      width: calc(100% - #{$distance + $border * 2});
+      z-index: 0;
     }
 
-    &:hover::after {
-      opacity: 1;
+    &:hover {
+      &::after {
+        background-color: rgba($primary, .5);
+      }
+
+      > h5,
+      > p {
+        opacity: 1;
+      }
+    }
+
+    > h5 {
+      text-shadow: .066em .066em $primary;
+    }
+
+    > h5,
+    > p {
+      color: $white;
+      line-height: $line-height;
+      opacity: 0;
+      padding: $distance / 2 $distance $distance;
+      position: relative;
+      text-align: center;
+      top: $distance * 3;
+      transition: all 250ms ease-out;
+      width: calc(100% - #{$distance * 2});
+      z-index: 1;
     }
   }
 }

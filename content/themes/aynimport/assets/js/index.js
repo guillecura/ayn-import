@@ -71,40 +71,6 @@
         $nav.removeClass("opened");
       }
     });
-
-    // Gallery filters
-    var $tag = $(".filters span");
-    var $imageItem = $(".content .gallery-image");
-
-    $tag.each(function() {
-      var brand = $(this).data("brand");
-      var image = $imageItem.data("name");
-      var brandActive = $(".content .gallery-image[data-name='" + brand + "']");
-
-      if ($(brandActive).length == 0) {
-        $(this).hide();
-
-        if (brand == "no-filter") {
-          $(this).show();
-        }
-      }
-
-      $(this).on("click tap", function(){
-
-        $imageItem.removeClass("active");
-
-        if (!$(this).hasClass("active")) {
-          $(this).addClass("active");
-          $(this).siblings().removeClass("active");
-        }
-
-        brandActive.addClass("active");
-
-        if (brand == "no-filter") {
-          $imageItem.addClass("active");
-        }
-      });
-    });
   });
 
 })(jQuery);
