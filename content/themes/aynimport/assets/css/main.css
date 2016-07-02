@@ -112,6 +112,95 @@ body {
     max-width: 1024px;
     width: 100%; }
 
+.modal-screen {
+  background-color: rgba(33, 41, 53, 0.95);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000; }
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  text-align: center;
+  width: 33vw;
+  z-index: 10001; }
+  @media (max-width: 1044px) {
+    .modal-content {
+      width: 50vw; } }
+  @media (max-width: 640px) {
+    .modal-content {
+      width: 80vw; } }
+  .modal-content::before {
+    border: 3px solid #b48e4a;
+    content: '';
+    display: block;
+    height: calc(100% - 26px);
+    left: 10px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: calc(100% - 26px);
+    z-index: 1; }
+    @media (max-width: 640px) {
+      .modal-content::before {
+        height: calc(100% - 16px);
+        left: 5px;
+        right: 5px;
+        top: 5px;
+        width: calc(100% - 16px); } }
+  .modal-content h2 {
+    line-height: 1.11em;
+    padding: 20px; }
+    @media (max-width: 640px) {
+      .modal-content h2 {
+        font-size: 1.5rem; } }
+  .modal-content p {
+    color: #b48e4a;
+    font-size: 0.85rem;
+    line-height: 1.11em;
+    padding: 20px; }
+  .modal-content nav ul {
+    display: block;
+    height: 7rem; }
+    @media (max-width: 640px) {
+      .modal-content nav ul {
+        height: 3rem; } }
+  .modal-content nav li {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+    list-style: none; }
+  .modal-content nav small {
+    color: #b48e4a; }
+  .modal-content nav a:not(.again) {
+    border: 3px solid transparent;
+    font-size: 3.5rem;
+    line-height: 2em;
+    margin: 0 10px;
+    padding: 0 30px; }
+    @media (max-width: 640px) {
+      .modal-content nav a:not(.again) {
+        border: 3px solid #212935;
+        font-size: 1.5rem;
+        padding: 0 20px; } }
+    .modal-content nav a:not(.again):hover {
+      border: 3px solid #212935; }
+  .modal-content nav .again {
+    font-size: 2.5rem;
+    line-height: 2em;
+    padding: 0 30px; }
+    @media (max-width: 640px) {
+      .modal-content nav .again {
+        border: 3px solid #212935;
+        font-size: 1.25rem; } }
+    .modal-content nav .again:hover {
+      border: 3px solid #212935; }
+
 .hi-box {
   background-color: #212935;
   display: block;
@@ -567,7 +656,7 @@ body > nav {
   right: 40px;
   top: 35px;
   width: 26.66667px;
-  z-index: 10001; }
+  z-index: 9999; }
   @media (max-width: 640px) {
     .menu-icon {
       right: 30px;

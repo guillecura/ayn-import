@@ -1,0 +1,125 @@
+// =============================================================================
+// AGE VERIFICATION PLUG IN
+// =============================================================================
+
+
+// Overlay
+// -----------------------------------------------------------------------------
+.modal-screen {
+  background-color: rgba($primary, .95);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-top;
+}
+
+.modal-content {
+  background-color: $white;
+  padding: $distance * 2;
+  position: fixed;
+  text-align: center;
+  width: 33vw;
+  z-index: $z-top + 1;
+
+  @include mq(desktop) {
+    width: 50vw;
+  }
+
+  @include mq(mobile) {
+    width: 80vw;
+  }
+
+  &::before {
+    border: $border solid $secondary;
+    content: '';
+    display: block;
+    height: calc(100% - #{$distance * 2 + $border * 2});
+    left: $distance;
+    pointer-events: none;
+    position: absolute;
+    right: $distance;
+    top: $distance;
+    width: calc(100% - #{$distance * 2 + $border * 2});
+    z-index: 1;
+
+    @include mq(mobile) {
+      height: calc(100% - #{$distance + $border * 2});
+      left: $distance / 2;
+      right: $distance / 2;
+      top: $distance / 2;
+      width: calc(100% - #{$distance + $border * 2});
+    }
+  }
+
+  h2 {
+    line-height: $line-height;
+    padding: $distance * 2;
+
+    @include mq(mobile) {
+      font-size: $fh3;
+    }
+  }
+
+  p {
+    color: $secondary;
+    font-size: $fsmall;
+    line-height: $line-height;
+    padding: $distance * 2;
+  }
+
+  nav {
+    ul {
+      display: block;
+      height: $fh1 * 2;
+
+      @include mq(mobile) {
+        height: $fh3 * 2;
+      }
+    }
+
+    li {
+      @include inline-block;
+      list-style: none;
+    }
+
+    small {
+      color: $secondary;
+    }
+
+    a:not(.again) {
+      border: $border solid transparent;
+      font-size: $fh1;
+      line-height: 2em;
+      margin: 0 $distance;
+      padding: 0 $distance * 3;
+
+      @include mq(mobile) {
+        border: $border solid $primary;
+        font-size: $fh3;
+        padding: 0 $distance * 2;
+      }
+
+      &:hover {
+        border: $border solid $primary;
+      }
+    }
+
+    .again {
+      font-size: $fh2;
+      line-height: 2em;
+      padding: 0 $distance * 3;
+
+      @include mq(mobile) {
+        border: $border solid $primary;
+        font-size: $fh4;
+      }
+
+      &:hover {
+        border: $border solid $primary;
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------------------
