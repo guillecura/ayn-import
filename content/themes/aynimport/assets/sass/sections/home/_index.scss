@@ -38,6 +38,17 @@
   @include inline-block;
   margin-left: 0;
   width: calc(50% - #{$distance});
+
+  .view-products {
+    color: $white;
+    float: right;
+    font-size: $fsmall;
+    margin: $distance * 2 0 0;
+
+    &:hover {
+      text-shadow: .066em .066em $secondary;
+    }
+  }
 }
 
 .tag-our-brands {

@@ -87,7 +87,7 @@ body {
     overflow: hidden; }
     body.nav-opened .main-nav,
     body.nav-opened .pages-nav {
-      left: calc(-33vh + 10px); }
+      left: calc(-25vw + 10px); }
 
 .site-wrapper {
   min-height: calc(100vh - 340px);
@@ -901,6 +901,13 @@ h6 {
   vertical-align: top;
   margin-left: 0;
   width: calc(50% - 10px); }
+  .tag-services.hi-box .view-products {
+    color: white;
+    float: right;
+    font-size: 0.85rem;
+    margin: 20px 0 0; }
+    .tag-services.hi-box .view-products:hover {
+      text-shadow: 0.066em 0.066em #b48e4a; }
 
 .tag-our-brands {
   display: inline-block;
