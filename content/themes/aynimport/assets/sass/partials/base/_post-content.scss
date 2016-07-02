@@ -17,10 +17,6 @@
     max-width: $post-box;
 
     @include mq(desktop) {
-      max-width: calc(75% - #{$distance * 3});
-    }
-
-    @include mq(hybrid) {
       max-width: 100%;
     }
   }
@@ -64,29 +60,6 @@
   }
 // -----------------------------------------------------------------------------
 
-
-// Multilingual or Side notes
-// -----------------------------------------------------------------------------
-  .sidenote {
-    display: block;
-    position: absolute;
-    right: $distance * 1.5;
-    top: $distance * 6;
-    width: $site-box - $post-box - $distance * 3;
-
-    @include mq(desktop) {
-      max-width: 25%;
-    }
-
-    @include mq(hybrid) {
-      display: none;
-    }
-
-    > * {
-      margin-bottom: $distance * 1.5;
-    }
-  }
-// -----------------------------------------------------------------------------
 
 
 // Quotes

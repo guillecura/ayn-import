@@ -27,10 +27,14 @@
     top: $distance;
     width: calc(100% - #{$distance * 2 + $border * 2});
     z-index: 1;
-  }
 
-  @include mq(mobile) {
-    max-height: 66vh;
+    @include mq(mobile) {
+      height: calc(100% - #{$distance + $border * 2});
+      left: $distance / 2;
+      right: $distance / 2;
+      top: $distance / 2;
+      width: calc(100% - #{$distance + $border * 2});
+    }
   }
 
   &.no-cover {background-color: $white;}
@@ -58,6 +62,11 @@
       height: $hero-logo;
       margin-bottom: $distance * 4;
       width: $hero-logo;
+
+      @include mq(mobile) {
+        height: $hero-logo * 2;
+        width: $hero-logo * 2;
+      }
     }
   }
 

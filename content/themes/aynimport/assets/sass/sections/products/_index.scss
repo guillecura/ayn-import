@@ -12,6 +12,15 @@
     min-height: calc(100vh - #{($header-height + $distance * 6) * 2 + $footer-height});
     text-align: left;
     width: $site-box;
+
+    @include mq(desktop) {
+      padding: 0 $distance * 3;
+      width: 100%;
+    }
+
+    @include mq(mobile) {
+      padding: 0 $distance;
+    }
   }
 
   .tag-head {
@@ -29,10 +38,32 @@
     top: -5.5rem;
     width: $site-box;
 
+    @include mq(desktop) {
+      padding: 0 $distance * 3;
+      width: 100%;
+    }
+
+    @include mq(hybrid) {
+      top: -$distance * 2;
+
+      h2 {
+        line-height: $line-height;
+        margin-bottom: $distance;
+      }
+    }
+
+    @include mq(mobile) {
+      padding: 0 $distance;
+    }
+
     .hi-box {
       @include inline-block;
       margin-left: 0;
       width: calc(50% - #{$distance});
+
+      @include mq(hybrid) {
+        width: 100%;
+      }
     }
 
     .brands {
@@ -41,6 +72,10 @@
       margin-left: $distance;
       text-align: right;
       width: calc(50% - #{$distance});
+
+      @include mq(hybrid) {
+        display: none;
+      }
 
       figure {
         $size: (($site-box / 2) / 6) - $distance;
@@ -52,6 +87,10 @@
         height: $size;
         margin-left: $distance / 2;
         width: $size;
+
+        @include mq(desktop) {
+          width: calc((50vw - #{$distance * 3}) / 6 - #{$distance});
+        }
 
         img {
           height: 0;
@@ -78,6 +117,22 @@
     transition: all 250ms ease-out;
     vertical-align: middle;
     width: #{$site-box / 4 - $distance};
+
+    @include mq(desktop) {
+      height: calc((100vw - #{$distance * 8}) / 4 - #{$distance});
+      width: calc((100vw - #{$distance * 8}) / 4 - #{$distance});
+    }
+
+    @include mq(hybrid) {
+      height: calc((100vw - #{$distance * 8}) / 3 - #{$distance});
+      width: calc((100vw - #{$distance * 8}) / 3 - #{$distance});
+    }
+
+    @include mq(mobile) {
+      height: calc(66vw - #{$distance * 5});
+      margin-bottom: calc(33vw - #{$distance * 3});
+      width: calc(100vw - #{$distance * 5});
+    }
 
     &::after {
       border: $border solid $white;
@@ -119,6 +174,14 @@
       transition: all 250ms ease-out;
       width: calc(100% - #{$distance * 2});
       z-index: 1;
+
+      @include mq(mobile) {
+        color: $secondary;
+        opacity: 1;
+        padding-bottom: 0;
+        padding-top: 0;
+        top: calc(66vw - #{$distance * 4.5});
+      }
     }
   }
 }

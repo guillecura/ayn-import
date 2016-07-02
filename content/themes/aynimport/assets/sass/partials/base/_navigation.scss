@@ -19,6 +19,10 @@
   width: 100%;
   z-index: $z-top;
 
+  @include mq(mobile) {
+    height: $header-height / 1.5 + $distance;
+  }
+
   &.active {
     background-color: $white;
     pointer-events: all;
@@ -31,6 +35,11 @@
       left: $distance;
       position: absolute;
       width: calc(100% - #{$distance * 2});
+
+      @include mq(mobile) {
+        left: $distance / 2;
+        width: calc(100% - #{$distance});
+      }
     }
 
     .logo {
@@ -49,6 +58,12 @@
     opacity: 0;
     transition: opacity 150ms ease-out;
     width: $header-height * 2 - $distance * 3;
+
+    @include mq(mobile) {
+      height: $header-height / 2.2;
+      margin: $distance;
+      width: $header-height + $distance;
+    }
   }
 }
 

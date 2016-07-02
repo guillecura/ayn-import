@@ -52,7 +52,7 @@
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="habanos, cigar, accessories"}}
+          {{#has tag="molasses, cigar, accessories"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}
@@ -66,14 +66,30 @@
             <h5>{{title}}</h5>
             {{content}}
           </figure>
+          <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
+            <h5>{{title}}</h5>
+            {{content}}
+          </figure>
+          <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
+            <h5>{{title}}</h5>
+            {{content}}
+          </figure>
+          <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
+            <h5>{{title}}</h5>
+            {{content}}
+          </figure>
+          <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
+            <h5>{{title}}</h5>
+            {{content}}
+          </figure>
         {{/has}}
       {{/foreach}}
       {{!-- End Tobacco --}}
 
-      {{!-- Habanos --}}
-      <article class="filters" name="habanos" id="habanos">
+      {{!-- Molasses --}}
+      <article class="filters" name="molasses" id="molasses">
         {{#foreach product}}
-          {{#has tag="habanos"}}
+          {{#has tag="molasses"}}
             {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
@@ -88,7 +104,7 @@
       </article>
 
       {{#foreach product}}
-        {{#has tag="habanos"}}
+        {{#has tag="molasses"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
             {{content}}
@@ -106,7 +122,7 @@
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="tobacco, habanos, accessories"}}
+          {{#has tag="tobacco, molasses, accessories"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}
@@ -133,7 +149,7 @@
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="tobacco, habanos, accessories"}}
+          {{#has tag="tobacco, molasses, accessories"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}

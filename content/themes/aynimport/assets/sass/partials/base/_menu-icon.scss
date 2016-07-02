@@ -19,5 +19,10 @@
   top: $distance * 3.5;
   width: $header-height / 3;
   z-index: $z-top + 1;
+
+  @include mq(mobile) {
+    right: $distance * 3;
+    top: $distance * 2.5;
+  }
 }
 // -----------------------------------------------------------------------------

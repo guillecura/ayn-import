@@ -44,9 +44,25 @@ body {
     left: -25vw;
     overflow: hidden;
 
+    @include mq(hybrid) {
+      left: -50vw;
+    }
+
+    @include mq(mobile) {
+      left: -66vw;
+    }
+
     .main-nav,
     .pages-nav {
       left: calc(-25vw + #{$distance});
+
+      @include mq(hybrid) {
+        left: calc(-50vw + #{$distance});
+      }
+
+      @include mq(mobile) {
+        left: calc(-66vw + #{$distance});
+      }
     }
   }
 }

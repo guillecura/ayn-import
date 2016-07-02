@@ -14,6 +14,15 @@
   padding-top: $header-height + $distance;
   position: relative;
 
+  @include mq(desktop) {
+    width: 100%;
+  }
+
+  @include mq(mobile) {
+    height: auto;
+    padding-top: 0;
+  }
+
   &::before {
     background-color: $secondary;
     content: '';
@@ -23,12 +32,23 @@
     top: calc(#{$fdef} + #{$header-height + $distance * 3.5});
     width: 100%;
     z-index: -1;
+
+    @include mq(mobile) {
+      top: 50%;
+    }
   }
 
   > h2 {
     background-color: $white;
     float: left;
     padding: 0 $distance;
+
+    @include mq(mobile) {
+      display: block;
+      float: none;
+      padding: 0;
+      text-align: center;
+    }
   }
 
   > a {
@@ -39,6 +59,10 @@
     line-height: $fdef;
     margin: $distance * 2.5 $distance / 2 $distance / 2;
     text-transform: uppercase;
+
+    @include mq(mobile) {
+      display: none;
+    }
 
     &::before {
       content: '•';

@@ -11,6 +11,10 @@
   padding: $distance * 3 $distance * 4;
   position: relative;
 
+  @include mq(mobile) {
+    padding: $distance * 2;
+  }
+
   &::before {
     border: $border solid $secondary;
     content: '';
@@ -23,6 +27,14 @@
     top: $distance;
     width: calc(100% - #{$distance * 2 + $border * 2});
     z-index: 1;
+
+    @include mq(mobile) {
+      height: calc(100% - #{$distance + $border * 2});
+      left: $distance / 2;
+      right: $distance / 2;
+      top: $distance / 2;
+      width: calc(100% - #{$distance + $border * 2});
+    }
   }
 
   h1,
