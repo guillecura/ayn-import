@@ -674,7 +674,7 @@ body > nav {
   top: 0;
   transition: left 300ms ease-out;
   width: 100%;
-  z-index: 10000; }
+  z-index: 9998; }
   @media (max-width: 640px) {
     .main-nav,
     .pages-nav {

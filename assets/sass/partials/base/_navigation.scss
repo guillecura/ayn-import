@@ -17,7 +17,7 @@
   top: 0;
   transition: left 300ms ease-out;
   width: 100%;
-  z-index: $z-top;
+  z-index: $z-top - 2;
 
   @include mq(mobile) {
     height: $header-height / 1.5 + $distance;
