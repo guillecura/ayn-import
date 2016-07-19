@@ -6,15 +6,30 @@
 {{!-- Everything inside the #post tags pulls data from the page --}}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
+<header class="pages-nav">
+  {{#if @blog.logo}}
+    <a class="logo" href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');">
+      {{@blog.title}}
+    </a>
+  {{else}}
+    <a class="no-logo" href="{{@blog.url}}">
+      {{@blog.title}}
+    </a>
+  {{/if}}
+</header>
 
-<main class="content" role="main">
-    <article class="{{post_class}}">
+<div class="site-wrapper">
 
-        <section class="post-content">
-            {{content}}
-        </section>
+  <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
 
-    </article>
-</main>
+  <main class="content" role="main">
+      <article class="{{post_class}}">
+
+          <section class="post-content">
+              {{content}}
+          </section>
+
+      </article>
+  </main>
+</div>
 {{/post}}

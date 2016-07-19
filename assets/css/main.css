@@ -634,7 +634,9 @@ body > nav {
       body > nav li > a h2 {
         color: white;
         font-size: 3vw;
-        line-height: 2.22em;
+        line-height: 1.11em;
+        margin-bottom: 0.555em;
+        margin-top: 0.555em;
         position: relative;
         transition: all 150ms ease-out; }
         @media (max-width: 854px) {

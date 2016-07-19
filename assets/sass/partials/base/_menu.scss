@@ -103,7 +103,9 @@ body > nav {
       h2 {
         color: $white;
         font-size: 3vw;
-        line-height: $line-height * 2;
+        line-height: $line-height;
+        margin-bottom: $line-height / 2;
+        margin-top: $line-height / 2;
         position: relative;
         transition: all 150ms ease-out;
 
