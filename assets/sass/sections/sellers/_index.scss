@@ -1,0 +1,35 @@
+// =============================================================================
+// GALLERY PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.page-template {
+  .content {
+    animation: op-in .999s ease-out forwards; // Opacity In animation
+    margin-bottom: $distance * 5;
+    min-height: calc(100vh - #{($header-height + $distance * 6) * 2 + $footer-height});
+    text-align: left;
+    width: $site-box;
+
+    @include mq(desktop) {
+      padding: 0 $distance * 3;
+      width: 100%;
+    }
+
+    @include mq(mobile) {
+      padding: 0 $distance;
+    }
+  }
+
+  .main-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33vh;
+    position: relative;
+    width: 100%;
+  }
+}
+// -----------------------------------------------------------------------------

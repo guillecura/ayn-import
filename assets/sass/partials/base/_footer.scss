@@ -28,6 +28,7 @@
 
     > figure {
       @include inline-block;
+      vertical-align: middle;
       width: 50%;
 
       @include mq(mobile) {
