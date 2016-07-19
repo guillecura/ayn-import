@@ -234,7 +234,8 @@ body {
   .hi-box h4,
   .hi-box h5,
   .hi-box h6 {
-    color: white; }
+    color: white;
+    line-height: 1.11em; }
   .hi-box * {
     color: #b48e4a; }
 
