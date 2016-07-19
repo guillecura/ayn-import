@@ -44,15 +44,15 @@
 
     {{#get "posts" order="published_at asc" include="tags" as |product|}}
       {{!-- Tobacco --}}
-      <article class="filters" name="tobacco" id="tobacco">
+      <article class="filters" name="tabaco" id="tabaco">
         {{#foreach product}}
-          {{#has tag="tobacco"}}
+          {{#has tag="tabaco"}}
             {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="molasses, cigar, accessories"}}
+          {{#has tag="habanos, cigarros, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}
@@ -61,7 +61,7 @@
       </article>
 
       {{#foreach product}}
-        {{#has tag="tobacco"}}
+        {{#has tag="tabaco"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
             {{content}}
@@ -71,15 +71,15 @@
       {{!-- End Tobacco --}}
 
       {{!-- Molasses --}}
-      <article class="filters" name="molasses" id="molasses">
+      <article class="filters" name="habanos" id="habanos">
         {{#foreach product}}
-          {{#has tag="molasses"}}
+          {{#has tag="habanos"}}
             {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="tobacco, cigar, accessories"}}
+          {{#has tag="tabaco, cigarros, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}
@@ -88,7 +88,7 @@
       </article>
 
       {{#foreach product}}
-        {{#has tag="molasses"}}
+        {{#has tag="habanos"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
             {{content}}
@@ -98,15 +98,15 @@
       {{!-- End Habanos --}}
 
       {{!-- Cigar --}}
-      <article class="filters" name="cigar" id="cigar">
+      <article class="filters" name="cigarros" id="cigarros">
         {{#foreach product}}
-          {{#has tag="cigar"}}
+          {{#has tag="cigarros"}}
             {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="tobacco, molasses, accessories"}}
+          {{#has tag="tabaco, habanos, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}
@@ -115,7 +115,7 @@
       </article>
 
       {{#foreach product}}
-        {{#has tag="cigar"}}
+        {{#has tag="cigarros"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
             {{content}}
@@ -125,15 +125,15 @@
       {{!-- End Cigar --}}
 
       {{!-- Accessories --}}
-      <article class="filters" name="accessories" id="accessories">
+      <article class="filters" name="accesorios" id="accesorios">
         {{#foreach product}}
-          {{#has tag="accessories"}}
+          {{#has tag="accesorios"}}
             {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
 
-          {{#has tag="tobacco, molasses, accessories"}}
+          {{#has tag="tabaco, habanos, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
             {{/foreach}}
@@ -142,7 +142,7 @@
       </article>
 
       {{#foreach product}}
-        {{#has tag="accessories"}}
+        {{#has tag="accesorios"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
             {{content}}
