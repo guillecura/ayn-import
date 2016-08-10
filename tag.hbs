@@ -46,14 +46,9 @@
       {{!-- Tobacco --}}
       <article class="filters" name="tabaco" id="tabaco">
         <h2>tabaco</h2>
-
-        {{#foreach product limit="1"}}
-          {{#has tag="habanos, cigarros, accesorios"}}
-            {{#foreach tags}}
-              <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
-            {{/foreach}}
-          {{/has}}
-        {{/foreach}}
+        <a href="#habanos" title="habanos">habanos</a>
+        <a href="#cigarros" title="cigarros">cigarros</a>
+        <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
       {{#foreach product}}
@@ -69,14 +64,9 @@
       {{!-- Molasses --}}
       <article class="filters" name="habanos" id="habanos">
         <h2>habanos</h2>
-
-        {{#foreach product limit="1"}}
-          {{#has tag="tabaco, cigarros, accesorios"}}
-            {{#foreach tags}}
-              <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
-            {{/foreach}}
-          {{/has}}
-        {{/foreach}}
+        <a href="#tabaco" title="tabaco">tabaco</a>
+        <a href="#cigarros" title="cigarros">cigarros</a>
+        <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
       {{#foreach product}}
@@ -92,14 +82,9 @@
       {{!-- Cigar --}}
       <article class="filters" name="cigarros" id="cigarros">
         <h2>cigarros</h2>
-
-        {{#foreach product limit="1"}}
-          {{#has tag="tabaco, habanos, accesorios"}}
-            {{#foreach tags}}
-              <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
-            {{/foreach}}
-          {{/has}}
-        {{/foreach}}
+        <a href="#tabaco" title="tabaco">tabaco</a>
+        <a href="#habanos" title="habanos">habanos</a>
+        <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
       {{#foreach product}}
@@ -115,14 +100,9 @@
       {{!-- Accessories --}}
       <article class="filters" name="accesorios" id="accesorios">
         <h2>accesorios</h2>
-
-        {{#foreach product limit="1"}}
-          {{#has tag="tabaco, habanos, accesorios"}}
-            {{#foreach tags}}
-              <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
-            {{/foreach}}
-          {{/has}}
-        {{/foreach}}
+        <a href="#tabaco" title="tabaco">tabaco</a>
+        <a href="#habanos" title="habanos">habanos</a>
+        <a href="#cigarros" title="cigarros">cigarros</a>
       </article>
 
       {{#foreach product}}
