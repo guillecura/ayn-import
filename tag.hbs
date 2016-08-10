@@ -45,13 +45,9 @@
     {{#get "posts" order="published_at asc" include="tags" as |product|}}
       {{!-- Tobacco --}}
       <article class="filters" name="tabaco" id="tabaco">
-        {{#foreach product limit="1"}}
-          {{#has tag="tabaco"}}
-            {{#foreach tags}}
-              <h2>{{name}}</h2>
-            {{/foreach}}
-          {{/has}}
+        <h2>tabaco</h2>
 
+        {{#foreach product}}
           {{#has tag="habanos, cigarros, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
@@ -72,13 +68,9 @@
 
       {{!-- Molasses --}}
       <article class="filters" name="habanos" id="habanos">
-        {{#foreach product limit="1"}}
-          {{#has tag="habanos"}}
-            {{#foreach tags}}
-              <h2>{{name}}</h2>
-            {{/foreach}}
-          {{/has}}
+        <h2>habanos</h2>
 
+        {{#foreach product}}
           {{#has tag="tabaco, cigarros, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
@@ -99,13 +91,9 @@
 
       {{!-- Cigar --}}
       <article class="filters" name="cigarros" id="cigarros">
-        {{#foreach product limit="1"}}
-          {{#has tag="cigarros"}}
-            {{#foreach tags}}
-              <h2>{{name}}</h2>
-            {{/foreach}}
-          {{/has}}
+        <h2>cigarros</h2>
 
+        {{#foreach product}}
           {{#has tag="tabaco, habanos, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
@@ -126,13 +114,9 @@
 
       {{!-- Accessories --}}
       <article class="filters" name="accesorios" id="accesorios">
-        {{#foreach product limit="1"}}
-          {{#has tag="accesorios"}}
-            {{#foreach tags}}
-              <h2>{{name}}</h2>
-            {{/foreach}}
-          {{/has}}
+        <h2>accesorios</h2>
 
+        {{#foreach product}}
           {{#has tag="tabaco, habanos, accesorios"}}
             {{#foreach tags}}
               <a href="#{{name}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
