@@ -45,9 +45,9 @@
     {{#get "posts" order="published_at asc" include="tags" as |product|}}
       {{!-- Tobacco --}}
       <article class="filters" name="tabaco" id="tabaco">
-        {{#foreach product}}
+        {{#foreach product limit="1"}}
           {{#has tag="tabaco"}}
-            {{#foreach tags limit="1"}}
+            {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
@@ -72,9 +72,9 @@
 
       {{!-- Molasses --}}
       <article class="filters" name="habanos" id="habanos">
-        {{#foreach product}}
+        {{#foreach product limit="1"}}
           {{#has tag="habanos"}}
-            {{#foreach tags limit="1"}}
+            {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
@@ -99,9 +99,9 @@
 
       {{!-- Cigar --}}
       <article class="filters" name="cigarros" id="cigarros">
-        {{#foreach product}}
+        {{#foreach product limit="1"}}
           {{#has tag="cigarros"}}
-            {{#foreach tags limit="1"}}
+            {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
@@ -126,9 +126,9 @@
 
       {{!-- Accessories --}}
       <article class="filters" name="accesorios" id="accesorios">
-        {{#foreach product}}
+        {{#foreach product limit="1"}}
           {{#has tag="accesorios"}}
-            {{#foreach tags limit="1"}}
+            {{#foreach tags}}
               <h2>{{name}}</h2>
             {{/foreach}}
           {{/has}}
