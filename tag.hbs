@@ -50,8 +50,8 @@
         <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
-      {{#get "posts" order="published_at asc" include="tags" as |prodtabaco|}}
-      {{#foreach prodtabaco}}
+      {{#get "posts" include="tags" limit="all"}}
+      {{#foreach posts}}
         {{#has tag="tabaco"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -70,8 +70,8 @@
         <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
-      {{#get "posts" order="published_at asc" include="tags" as |prodhabanos|}}
-      {{#foreach prodhabanos}}
+      {{#get "posts" include="tags" limit="all"}}
+      {{#foreach posts}}
         {{#has tag="habanos"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -90,8 +90,8 @@
         <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
-      {{#get "posts" order="published_at asc" include="tags" as |prodcigarros|}}
-      {{#foreach prodcigarros}}
+      {{#get "posts" include="tags" limit="all"}}
+      {{#foreach posts}}
         {{#has tag="cigarros"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -110,8 +110,8 @@
         <a href="#cigarros" title="cigarros">cigarros</a>
       </article>
 
-      {{#get "posts" order="published_at asc" include="tags" as |prodaccesorios|}}
-      {{#foreach prodaccesorios}}
+      {{#get "posts" include="tags" limit="all"}}
+      {{#foreach posts}}
         {{#has tag="accesorios"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
