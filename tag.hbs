@@ -42,7 +42,6 @@
   {{!-- The main content area on the homepage --}}
   <main class="content" role="main">
 
-    {{#get "posts" order="published_at asc" include="tags" as |product|}}
       {{!-- Tobacco --}}
       <article class="filters" name="tabaco" id="tabaco">
         <h2>tabaco</h2>
@@ -51,7 +50,8 @@
         <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
-      {{#foreach product}}
+      {{#get "posts" order="published_at asc" include="tags" as |prodtabaco|}}
+      {{#foreach prodtabaco}}
         {{#has tag="tabaco"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -59,6 +59,7 @@
           </figure>
         {{/has}}
       {{/foreach}}
+      {{/get}}
       {{!-- End Tobacco --}}
 
       {{!-- Molasses --}}
@@ -69,7 +70,8 @@
         <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
-      {{#foreach product}}
+      {{#get "posts" order="published_at asc" include="tags" as |prodhabanos|}}
+      {{#foreach prodhabanos}}
         {{#has tag="habanos"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -77,6 +79,7 @@
           </figure>
         {{/has}}
       {{/foreach}}
+      {{/get}}
       {{!-- End Habanos --}}
 
       {{!-- Cigar --}}
@@ -87,7 +90,8 @@
         <a href="#accesorios" title="accesorios">accesorios</a>
       </article>
 
-      {{#foreach product}}
+      {{#get "posts" order="published_at asc" include="tags" as |prodcigarros|}}
+      {{#foreach prodcigarros}}
         {{#has tag="cigarros"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -95,6 +99,7 @@
           </figure>
         {{/has}}
       {{/foreach}}
+      {{/get}}
       {{!-- End Cigar --}}
 
       {{!-- Accessories --}}
@@ -105,7 +110,8 @@
         <a href="#cigarros" title="cigarros">cigarros</a>
       </article>
 
-      {{#foreach product}}
+      {{#get "posts" order="published_at asc" include="tags" as |prodaccesorios|}}
+      {{#foreach prodaccesorios}}
         {{#has tag="accesorios"}}
           <figure class="gallery-image {{post_class}}" data-name="{{title}}" style="background-image: url('{{image}}');">
             <h5>{{title}}</h5>
@@ -113,9 +119,8 @@
           </figure>
         {{/has}}
       {{/foreach}}
+      {{/get}}
       {{!-- End Accessories --}}
-    {{/get}}
-      {{!-- The tag below includes the post loop - partials/loop.hbs --}}
 
   </main>
 </div>
