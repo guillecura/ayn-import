@@ -60,7 +60,7 @@
     width: $header-height * 2 - $distance * 3;
 
     @include mq(mobile) {
-      height: $header-height / 2.2;
+      height: $header-height / 2.25;
       margin: $distance;
       width: $header-height + $distance;
     }

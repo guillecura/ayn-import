@@ -580,9 +580,11 @@ body > nav {
     width: 25vw; }
     @media (max-width: 854px) {
       body > nav.opened {
+        overflow-y: auto;
         width: 50vw; } }
     @media (max-width: 640px) {
       body > nav.opened {
+        overflow-y: hidden;
         width: 66vw; } }
   body > nav > ul {
     position: absolute;
@@ -634,7 +636,7 @@ body > nav {
           padding-left: 3vw; } }
       body > nav li > a h2 {
         color: white;
-        font-size: 3vw;
+        font-size: 2vw;
         line-height: 1.11em;
         margin-bottom: 0.555em;
         margin-top: 0.555em;
@@ -719,7 +721,7 @@ body > nav {
     @media (max-width: 640px) {
       .main-nav .logo,
       .pages-nav .logo {
-        height: 36.36364px;
+        height: 35.55556px;
         margin: 10px;
         width: 90px; } }
 
@@ -1260,7 +1262,10 @@ h6 {
       width: 100%; } }
   @media (max-width: 640px) {
     .page-template .content {
-      padding: 0 10px; } }
+      padding: 0 10px; }
+      .page-template .content .post-header h2 {
+        line-height: 1.11em;
+        margin-bottom: 10px; } }
 
 .page-template .main-header {
   background-position: center;
