@@ -1263,7 +1263,7 @@ h6 {
   @media (max-width: 640px) {
     .page-template .content {
       padding: 0 10px; }
-      .page-template .content .post-header h2 {
+      .page-template .content h2 {
         line-height: 1.11em;
         margin-bottom: 10px; } }
 

@@ -21,7 +21,7 @@
     @include mq(mobile) {
       padding: 0 $distance;
 
-      .post-header h2 {
+      h2 {
         line-height: $line-height;
         margin-bottom: $distance;
       }
